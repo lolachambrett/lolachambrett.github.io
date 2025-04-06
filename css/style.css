@@ -10003,21 +10003,6 @@ h6,
 }
 
 
-.carousel-img {
-  height: 350px;
-  object-fit: contain;
-  width: 100%;
-}
-
-.swiper {
-  padding: 20px 0;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* Itens cortados mas mais bonitos */
  .grid-gallery {
@@ -10036,7 +10021,7 @@ h6,
 .grid-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -10156,3 +10141,84 @@ h6,
       grid-auto-rows: 220px;
     }
   } */
+
+
+  .slick-prev, .slick-next {
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: none;
+    color: #333;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    left: -50px;
+  }
+
+  .slick-next {
+    right: -50px;
+  }
+
+  .slick-prev i, .slick-next i {
+    font-size: 20px;
+    color: #333;
+  }
+  .slick-gallery {
+    overflow: visible;
+    width: 100%;
+
+  }
+  
+  .slick-gallery img {
+    width: auto;
+    height: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+ /* Padrão para desktop */
+.slick-slide {
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .slick-slide {
+    padding: 0 8px;
+  }
+}
+
+/* Celular */
+@media (max-width: 767.98px) {
+  .slick-slide {
+    padding: 0 10px;
+  }
+}
+
+  
+  @media (max-width: 768px) {
+    .slick-gallery img {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slick-gallery img {
+      height: 160px;
+    }
+  }
+  
+  
